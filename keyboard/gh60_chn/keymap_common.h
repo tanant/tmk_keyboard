@@ -29,9 +29,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "keymap.h"
 
 
-/* GH60 keymap definition macro
+/* GH60.revCHN keymap definition macro
  * K2C, K31 and  K3C are extra keys for ISO
  */
+// this reflects the actual physical layout of the board. If you look at my matrix diagram, you can see the top row has 15 keys, but the matrix for this
+// consumes all 14 cols and row 1, but the extra key is row 5, col 10. AKA KC_##K49 so you can see this on the bottom row (correctly)
+// the other row this affects is row 4 with the splittable shift keys
 #define KEYMAP( \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K0A, K0B, K0C, K0D, \
     K10, K11, K12, K13, K14, K15, K16, K17, K18, K19, K1A, K1B, K1C, K1D, \
@@ -46,7 +49,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     { KC_##K40, KC_##K41, KC_##K42, KC_NO,    KC_NO,    KC_##K45, KC_NO,    KC_NO,    KC_NO,    KC_##K49, KC_##K4A, KC_##K4B, KC_##K4C, KC_##K4D }  \
 }
 
-/* ANSI valiant. No extra keys for ISO */
+
+/* ANSI variant. No extra keys for ISO */
+// note the keys that are not plubmed - K49 (physically on top row, under backspace), K2C (under enter key), K3C (under l shift), K31 (under r shift))
+// you could plumb all of these if you really wanted with breakouts.
+// basically, use KEYMAP() for raw access
+// use KEYMAP_ANSI() for indirection to KEYMAP() which maps the logical correctly out
 #define KEYMAP_ANSI( \
     K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, K0A, K0B, K0C, K0D, \
     K10, K11, K12, K13, K14, K15, K16, K17, K18, K19, K1A, K1B, K1C, K1D, \
