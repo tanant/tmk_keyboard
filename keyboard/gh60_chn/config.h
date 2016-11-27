@@ -18,14 +18,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef CONFIG_H
 #define CONFIG_H
 
-
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x6060
+#define VENDOR_ID       0xDEAD
+#define PRODUCT_ID      0xBEEF
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    geekhack
+#define MANUFACTURER    unknown
 #define PRODUCT         GH60
-#define DESCRIPTION     t.m.k. keyboard firmware for GH60
+#define DESCRIPTION     t.m.k. keyboard firmware for GH60 rev.CHN
 
 /* key matrix size */
 #define MATRIX_ROWS 5
