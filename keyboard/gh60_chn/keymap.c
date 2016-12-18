@@ -53,7 +53,7 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,WH_U,MS_U,WH_D,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS,MS_L,MS_D,MS_R,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
-        BTN2, APP,TRNS,             BTN1,                 TRNS,TRNS,RGUI,TRNS),
+        BTN2, APP,TRNS,             BTN1,                 TRNS,TRNS,TRNS,TRNS),
 
 
     [FN_TEMP] =  KEYMAP_ANSI(
@@ -61,7 +61,9 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,WH_U,MS_U,WH_D,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS,MS_L,MS_D,MS_R,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,     TRNS, \
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,          TRNS, \
-        BTN2, APP,TRNS,             BTN1,                 TRNS,FN2, RGUI,TRNS),             // on entering this layer, you can't jump to FN1/FN0 without a release
+        BTN2, APP,TRNS,             BTN1,                 TRNS,FN2, TRNS,TRNS),             // on entering this layer, you can't jump to FN1/FN0 without a release
+		
+		// any held down keys are a dangerous place to not use TRNS
 
 
 	/*
