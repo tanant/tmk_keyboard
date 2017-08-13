@@ -14,12 +14,12 @@ enum fn_id {
 const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	// keymap 0 - baseline
-    [FN_DEFAULT_LAYER] = KEYMAP_ANSI(
+    [FN_DEFAULT_LAYER] = KEYMAP_ANSI(\
         ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, BSPC, \
-        TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSLS, \
-        FN0, A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,     ENT,  \
+        TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSLS, \	
+        FN0, A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,  ENT,  \
         LSFT,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, SLSH,          RSFT, \
-        LCTL,LGUI,LALT,          SPC,                     RALT,FN2, FN1, RCTL),   // 
+        LCTL,LGUI,LALT,          SPC,                     RALT,FN2, FN1, RCTL),   
 
 	// layer 1: nav/fn
     [FN_NAV_LAYER] = KEYMAP_ANSI(
